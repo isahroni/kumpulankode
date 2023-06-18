@@ -1,4 +1,17 @@
-private void getVersionApp(){
+
+package org.ishn.app;
+
+public class YourActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.your_activity);
+
+        getVersionApp();
+    }
+    
+    private void getVersionApp(){
         PackageManager packageManager = getActivity().getPackageManager();
         try {
             PackageInfo info = packageManager.getPackageInfo(getActivity().getPackageName(), 0);
@@ -8,4 +21,5 @@ private void getVersionApp(){
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
+    }
 }
