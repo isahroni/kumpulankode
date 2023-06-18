@@ -1,7 +1,7 @@
 
 package org.ishn.app;
 
-public class YourActivity extends AppCompatActivity {
+public class YourActivity extends Fragment {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
